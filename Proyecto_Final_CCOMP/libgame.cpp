@@ -55,4 +55,67 @@ void pausa(){
 }
 
 
+
+JUGADOR::JUGADOR(int _x, int _y)
+{
+    x=_x;
+    y=_y;
+}
+
+void JUGADOR::pintar() const
+{
+    gotoxy(x,y-1); printf("%c",219);
+    gotoxy(x,y); printf("%c",219);
+    gotoxy(x,y+1); printf("%c",219);
+}
+
+void JUGADOR::borrar()const{
+    gotoxy(x,y-1); printf(" ");
+    gotoxy(x,y); printf(" ");
+    gotoxy(x,y+1); printf(" ");
+}
+
+
+PELOTA::PELOTA(int _x, int _y, int _dx, int _dy)
+{
+    x=_x;
+    y=_y;
+    dx=_dx;
+    dy=_dy;
+}
+
+void PELOTA::pintar() const
+{
+    gotoxy(x,y); printf("%c",184);
+
+}
+void PELOTA::borrar() const
+{
+    gotoxy(x,y); printf(" ");
+
+}
+
+void PELOTA::mover()
+{
+    borrar();
+    x+=dx;
+    y+=dy;
+    pintar();
+    if(x + dx == 3 || x +dx == 76)
+        {
+            borrar();
+            asignar(38,14);
+            dx = -dx;
+        }
+    if(y + dy == 3 || y + dy == 23)
+        {
+            borrar();
+            dy = -dy;
+        }
+}
+
+
+
+
+
                                                                                                                                                                                                                                                                                                                                                                                                                                   void inicia_libgame(){char inicio[50][100] ={"                  AAA        AAAAAAAA    AAAAAA                       ","                  AAA           AA       AA   AA                      ","                  AAA           AA       AAAAAA                       ","                  AAAAAAA       AA       AA   AA                      ","                  AAAAAAA    AAAAAAAA    AAAAAA                       ","                                                                      ","                                                                      ","                                                                      ","       AAAAAAAAA      AAAAAA       AAAA  AAAA      AAAAAAAAAAA        ","       AAAAAAAAA     AAA    A    AAAAAAAAAAAAAA    AAAAAAAAAAA        ","       AA     AA     AAA    A   AAA  AAAAA   AAA   AAA                ","       AA            AAA    A   AAA   AAA    AAA   AAAAAAAA           ","       AA   AAAAAA   AAAAAAAA   AAA   AAA    AAA   AAAAAAAA           ","       AA        A   AAA    A   AAA   AAA    AAA   AAA                ","       AAAAAAAAA A   AAA    A   AAA   AAA    AAA   AAAAAAAAAAA        ","       AAAAAAAAA     AAA    A   AAA   AAA    AAA   AAAAAAAAAAA        ","                                                                      ",};for(int i = 0 ; i< 17 ; i++){for(int j = 0 ; j < 71 ; j++){if(inicio[i][j] == 'A'){gotoxy(j+5,i+5); printf("*");}}}getch();for(int i = 0 ; i< 17 ; i++){for(int j = 0 ; j < 71 ; j++){if(inicio[i][j] == 'A'){gotoxy(j+5,i+5); printf(" ");}}}}

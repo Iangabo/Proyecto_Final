@@ -28,3 +28,33 @@ void pausa(int x);
 void pausa();
 
 #endif // LIBGAME_H_INCLUDED
+
+class JUGADOR {
+    int x,y;
+public:
+    JUGADOR(int _x, int _y);
+    void pintar() const ;
+    void borrar() const ;
+    void subir(int _y){
+        y+=_y;
+        }
+    int RY(){
+        return y;
+    }
+};
+
+class PELOTA
+{
+    int x,y;
+    int dx,dy;
+    public:
+        PELOTA(int _x, int _y, int _dx, int _dy);
+        void pintar() const;
+        void borrar() const;
+        void mover();
+        void asignar(int _x,int _y)
+        {
+            x=_x;
+            y=_y;
+        }
+};

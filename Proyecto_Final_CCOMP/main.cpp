@@ -1,34 +1,10 @@
 #include <stdio.h>
+#include <conio.h>
 #include "libgame.h"
 
-class JUGADOR {
-    int x,y;
-public:
-    JUGADOR(int _x, int _y);
-    void pintar() const ;
-    void borrar() const ;
-};
-
-JUGADOR::JUGADOR(int _x, int _y)
-{
-    x=_x;
-    y=_y;
-}
 
 
 
-void JUGADOR::pintar() const
-{
-    gotoxy(x,y-1); printf("%c",219);
-    gotoxy(x,y); printf("%c",219);
-    gotoxy(x,y+1); printf("%c",219);
-}
-
-void JUGADOR::borrar()const{
-    gotoxy(x,y-1); printf(" ");
-    gotoxy(x,y); printf(" ");
-    gotoxy(x,y+1); printf(" ");
-}
 
 int main(){
     OcultaCursor();
@@ -38,7 +14,29 @@ int main(){
     A.pintar();
     JUGADOR B(72,15);
     B.pintar();
+    PELOTA P(10,5,1,1);
+    char tecla;
+    int cont=0;
+    while(1)
+        {
 
+            if(kbhit()){
+                    A.borrar();
+                    B.borrar();
+                    tecla=getch();
+                    if(tecla=='w'&& A.RY() > 5) A.subir(-1);
+                    else if(tecla=='s'&& A.RY() < 21 ) A.subir(1);
+                    if(tecla=='o'&& B.RY() >5) B.subir(-1);
+                    else if(tecla=='l'&& B.RY()  < 21) B.subir(1);
+                    A.pintar();
+                    B.pintar();
+
+        }
+
+        if(!cont++)P.mover();
+        if(cont>5)cont=0;
+        pausa(10);
+    }
 
     return 0;
 
