@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1528158898 source:c:\users\ian camero\desktop\proyecto final ccomp\libgame.cpp
+	"libgame.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+
+1528158994 c:\users\ian camero\desktop\proyecto final ccomp\libgame.h
+
+1528158729 source:c:\users\ian camero\desktop\proyecto final ccomp\main.cpp
+	<stdio.h>
+	<conio.h>
+	"libgame.h"
+
