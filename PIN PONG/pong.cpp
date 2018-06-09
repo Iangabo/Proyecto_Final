@@ -32,6 +32,15 @@ int JUGADOR::RX(){
     return x;
 }
 
+void JUGADOR::mover_cpu(int _x, int _y, int _dx){
+    if(_x>65 && _dx>0){
+        borrar();
+        if(_y>y && y+1<22) y++;
+        if(_y<y && y-1>4) y--;
+        pintar();
+    }
+}
+
 PELOTA::PELOTA(int _x, int _y,int _dx, int _dy){
     x=_x;
     y=_y;
@@ -65,10 +74,18 @@ void PELOTA::mover(JUGADOR A, JUGADOR B){
         dx=-dx;
     }
 }
-
 void PELOTA::asign(int _x, int _y){
     x=_x;
     y=_y;
+}
+int PELOTA::PX(){
+        return x;
+}
+int PELOTA::PY(){
+        return y;
+}
+int PELOTA::DX(){
+        return dx;
 }
 
 void MENU::pintar_portada( int &a){

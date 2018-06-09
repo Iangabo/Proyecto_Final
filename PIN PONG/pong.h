@@ -7,6 +7,7 @@ public:
     JUGADOR(int, int); //constructor de la clase Jugador
     void pintar()const;
     void borrar() const;
+    void mover_cpu(int,int,int);
     void Y( int);
     int RY();
     int RX();
@@ -22,7 +23,9 @@ public:
     void borrar() const;
     void mover(JUGADOR,JUGADOR);
     void asign(int , int);
-
+    int PX();
+    int PY();
+    int DX();
 };
 
 class MENU{
