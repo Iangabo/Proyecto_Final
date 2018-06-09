@@ -2,6 +2,8 @@
 #include <conio.h>
 #include<iostream>
 #include "libgame.h"
+#include "pong.h"
+
 using namespace std;
 
 int main(){

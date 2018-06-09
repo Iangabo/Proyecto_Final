@@ -35,6 +35,8 @@
 		<Unit filename="libgame.cpp" />
 		<Unit filename="libgame.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="pong.cpp" />
+		<Unit filename="pong.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

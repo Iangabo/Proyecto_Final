@@ -4,28 +4,8 @@
 #include <conio.h>
 using namespace std;
 
-class JUGADOR {
-int x,y;
-public:
-    JUGADOR(int, int); //constructor de la clase Jugador
-    void pintar()const;
-    void borrar() const;
-    void Y( int);
-    int RY();
-    int RX();
-};
 
-class PELOTA{
-    int x,y;
-    int dx,dy;
-public:
-    PELOTA(int, int, int, int);
-    void pintar() const;
-    void borrar() const;
-    void mover(JUGADOR,JUGADOR);
-    void asign(int , int);
 
-};
 
 // NUMEROS ASOCIADOS A LAS FLECHAS DEL TECLADO
 #define ARRIBA     72
