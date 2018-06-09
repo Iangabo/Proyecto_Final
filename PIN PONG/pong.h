@@ -25,4 +25,9 @@ public:
 
 };
 
+class MENU{
+public:
+    void pintar_portada(int &);
+};
+
 #endif // PONG_H_INCLUDED

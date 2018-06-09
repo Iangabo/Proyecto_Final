@@ -8,16 +8,20 @@ using namespace std;
 
 int main(){
 
+
     OcultaCursor();
     pintar_marco();
+    int cont=0, op_juego;
+    MENU M;
+    M.pintar_portada(op_juego);
     JUGADOR A(6,15);
     A.pintar();
     JUGADOR B(74,15);
     B.pintar();
     PELOTA P(38,14,1,1);
 
+
     char tecla;
-    int cont=0;
     while(1){
         if(kbhit()){
             A.borrar(); B.borrar();
