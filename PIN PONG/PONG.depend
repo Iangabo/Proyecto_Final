@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1528503017 source:c:\users\karen\pin pong\libgame.cpp
+	"libgame.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+	<iostream>
+
+1528503017 c:\users\karen\pin pong\libgame.h
+	<iostream>
+	<conio.h>
+
+1528503082 source:c:\users\karen\pin pong\main.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	"libgame.h"
+
