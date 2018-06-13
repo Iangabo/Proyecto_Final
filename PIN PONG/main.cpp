@@ -3,12 +3,9 @@
 #include<iostream>
 #include "libgame.h"
 #include "pong.h"
-
 using namespace std;
 
 int main(){
-
-
     OcultaCursor();
     pintar_marco();
     int cont=0, op_juego;
@@ -22,13 +19,18 @@ int main(){
 
 
     char tecla;
+
     while(1){
         if(kbhit()){
             A.borrar(); B.borrar();
             tecla= getch();
+            if(tecla=='p'){pausa();};
+            if(tecla=='m'){ M.pintar_portada(op_juego);};
+            if(tecla=='Q' && A.RY()>5) A.Y(-1); else if (tecla=='A' &&A.RY()<21) A.Y(1);
             if(tecla=='q' && A.RY()>5) A.Y(-1); else if (tecla=='a' &&A.RY()<21) A.Y(1);
             if(op_juego=='1'){
             if(tecla=='o' && B.RY()>5) B.Y(-1); else if (tecla=='l'&& B.RY()<21) B.Y(1);
+            if(tecla=='O' && B.RY()>5) B.Y(-1); else if (tecla=='L'&& B.RY()<21) B.Y(1);
             }
             A.pintar(); B.pintar();
         }

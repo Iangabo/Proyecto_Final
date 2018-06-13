@@ -26,3 +26,30 @@
 	"libgame.h"
 	"pong.h"
 
+1528898587 source:c:\users\alumno-e\desktop\proyecto_final\pin pong\libgame.cpp
+	"libgame.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+	<iostream>
+
+1528898587 c:\users\alumno-e\desktop\proyecto_final\pin pong\libgame.h
+	<iostream>
+	<conio.h>
+
+1528901351 source:c:\users\alumno-e\desktop\proyecto_final\pin pong\main.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	"libgame.h"
+	"pong.h"
+
+1528898587 c:\users\alumno-e\desktop\proyecto_final\pin pong\pong.h
+
+1528898587 source:c:\users\alumno-e\desktop\proyecto_final\pin pong\pong.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	"libgame.h"
+	"pong.h"
+
