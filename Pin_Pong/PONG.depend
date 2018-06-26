@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1529893734 source:c:\users\karen\ccomp\libgame.cpp
+	"libgame.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+	<iostream>
+
+1529893734 c:\users\karen\ccomp\libgame.h
+	<iostream>
+	<conio.h>
+
+1529893734 source:c:\users\karen\ccomp\pong.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	"libgame.h"
+	"pong.h"
+
+1529893734 c:\users\karen\ccomp\pong.h
+
+1529896379 source:c:\users\karen\ccomp\pin_pong\libgame.cpp
+	"libgame.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+	<iostream>
+
+1529893734 c:\users\karen\ccomp\pin_pong\libgame.h
+	<iostream>
+	<conio.h>
+
+1529972258 source:c:\users\karen\ccomp\pin_pong\main.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	"libgame.h"
+	"pong.h"
+
+1529942719 c:\users\karen\ccomp\pin_pong\pong.h
+
+1529943550 source:c:\users\karen\ccomp\pin_pong\pong.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	"libgame.h"
+	"pong.h"
+
