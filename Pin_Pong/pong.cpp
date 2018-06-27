@@ -91,16 +91,15 @@ int PELOTA::DX(){
         return dx;
 }
 
-//void puntaje::puntaje(int x_,int y_){
-//    x=x_;
-//    y=y_;
-//}
-//
-//void puntaje::aumentar_score(int score_){
-//    gotoxy(1,1);cout<<"Score: ";
-//    while(score_<=100){
-//    if(x+dx==3||x+dx==76){
-//    gotoxy(8,1); cout<<score++;}}}
+puntaje::puntaje(int _x, int _y,int _dx, int _dy):PELOTA(_x, _y, _dx, _dy )
+{
+}
+
+void puntaje::aumentar_score(int score_){
+
+    while(score_<=100){
+    if(x+dx==3||x+dx==76){
+    gotoxy(8,1); cout<<score_++;}}}
 
 
 //void PELOTA::borrar_score(int x_,int y_){

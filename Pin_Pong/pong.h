@@ -15,9 +15,10 @@ public:
 
 
 class PELOTA{
-    int x,y,score;
-    int dx,dy;
+
 public:
+     int x,y;
+    int dx,dy;
     PELOTA(int, int, int, int);
     void pintar() const;
     void borrar() const;
@@ -29,13 +30,13 @@ public:
     int DX();
 };
 
-//class puntaje{
-//    int x,y;
-//public:
-//    void puntaje(int, int);
-//    void aumentar_score();
-//    void borrar_score();
-//};
+class puntaje:public PELOTA{
+public:
+    puntaje( int, int, int,int); //constructor
+    void aumentar_score(int);
+    void borrar_score();
+};
+
 class MENU{
 public:
     void pintar_portada(int &);

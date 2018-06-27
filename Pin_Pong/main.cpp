@@ -5,8 +5,9 @@
 #include "pong.h"
 
 using namespace std;
-int velocidad=20,h=1;
+int velocidad=10,h=1;
 int score=0;
+
 
 void cambiar_velocidad(){
         if(score==h*10){
@@ -30,11 +31,14 @@ int main(){
     JUGADOR B(74,15);
     B.pintar();
     PELOTA P(38,14,1,1);
-//    puntaje C(1,1);
+    puntaje C();
 
     char tecla;
+    gotoxy(1,1);
+cout<<"Score: ";
 
     while(1){
+
 
 
             if(kbhit()){
@@ -52,6 +56,7 @@ int main(){
         if(!cont++){
         P.mover(A,B);
 //        C.aumentar_score(score);
+
         }
 
         if(cont>5)cont=0;
